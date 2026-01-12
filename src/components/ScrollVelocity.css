@@ -1,0 +1,54 @@
+.parallax {
+  position: relative;
+  overflow: hidden;
+  height: 100px;
+}
+
+.scroller {
+  display: flex;
+  white-space: nowrap;
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.custom-scroll-text {
+  font-size: 2.8rem;
+  background: linear-gradient(
+    90deg,
+    #9d4edd 0%,     /* Purple */
+    #ffffff 35%,    /* White */
+    #b0e0ff 65%,    /* Light Blue */
+    #9d4edd 100%    /* Purple again for loop */
+  );
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 10s linear infinite;
+  padding: 0 60px;
+  flex-shrink: 0;
+
+
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .custom-scroll-text {
+    font-size: 5.5rem;
+    letter-spacing: 0.2em;
+    padding: 0 100px;
+  }
+  .parallax {
+    height: 160px;
+  }
+}
