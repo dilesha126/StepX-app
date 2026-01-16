@@ -9,7 +9,7 @@ import About from './Pages/About';
 import Men from './Pages/Men';
 import Women from './Pages/Women';
 import Collection from './Pages/Collection';
-
+import ProductDetail from './Pages/ProductDetail';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -42,6 +42,7 @@ function App() {
             <Route path="/women" element={<Women />} />
             <Route path="/Collection" element={<Collection />} />
             {/* <Route path="/contact" element={<Contact />} /> */}
+           <Route path="/product/:slug" element={<ProductDetail />} />
 
             {/* Agar koi galat URL daale to wapas Home pe */}
             <Route path="*" element={
