@@ -1,9 +1,8 @@
 import React from 'react';
-import { Box, Container, Grid, Typography } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
 
-// Replace this with your actual image path
-import imgshoes from '../imge/imgshoes.png'; // ← tamari image yaha muki do
-import { Color } from 'three/src/Three.Core.js';
+// Replace image path
+import imgshoes from '../imge/imgshoes.png'; 
 
 const About= () => {
   return (
@@ -23,11 +22,11 @@ const About= () => {
             gap: { xs: 4, md: 8 },
           }}
         >
-          {/* Text Part - Mobile pe yeh upar aayega */}
+         
           <Box
             sx={{
               flex: 1,
-              order: { xs: 1, md: 2 }, // Mobile pe pehle, Desktop pe baad me (right side)
+              order: { xs: 1, md: 2 }, 
               textAlign: { xs: 'center', md: 'left' },
             }}
           >
@@ -87,7 +86,7 @@ const About= () => {
             </Typography>
           </Box>
 
-          {/* Image Part - Mobile pe yeh niche aayega */}
+          {/* Image Part  */}
             <Box
                     sx={{
                       flex: 1,
@@ -110,17 +109,17 @@ const About= () => {
                           '&:hover img': {
                             transform: 'scale(1.15)', // Hover par strong zoom
                           },
-                          // Scroll-driven parallax zoom animation
+                          // Scroll zoom animation
                           animation: 'scrollZoom 15s ease-in-out forwards',
                           '@keyframes scrollZoom': {
                             '0%': {
-                              transform: 'scale(1.2)', // Starting mein thoda zoomed-in
+                              transform: 'scale(1.2)', 
                             },
                             '100%': {
-                              transform: 'scale(1)', // Scroll karne par normal size
+                              transform: 'scale(1)', 
                             },
                           },
-                          // Mobile par animation thoda slow ya off karne ke liye optional
+        
                           '@media (max-width: 600px)': {
                             animationDuration: '20s',
                           },

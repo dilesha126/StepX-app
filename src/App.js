@@ -9,7 +9,7 @@ import About from './Pages/About';
 import Men from './Pages/Men';
 import Women from './Pages/Women';
 import Collection from './Pages/Collection';
-import Contact from './Pages/Contact';      // Contect → Contact (spelling correct ki)
+
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 

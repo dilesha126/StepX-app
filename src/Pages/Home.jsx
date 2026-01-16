@@ -1,12 +1,12 @@
 import React from 'react';
-import { Container, Grid, Typography, Box, Button } from '@mui/material';
+import { Container, Grid, Typography, Box } from '@mui/material';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import LiquidEther from '../components/LiquidEther';// liquidbackground effect import
 
 const Home = () => {
 
   const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 1000], [0, 150]);
+
 
   return (
     <Box

@@ -65,7 +65,7 @@ const Footer = () => {
             </Box>
           </Grid>
 
-          {/* Column 2 - Company Info & Policies */}
+          {/* Column 2 - Company Info */}
           <Grid item xs={6} sm={6} md={3}>
             <Typography
               variant="h6"

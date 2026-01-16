@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 import '../components/ScrollVelocity.css';
 
-// Import your own 24 images (change paths/names as per your project)
+// Import your own 24 images (change paths)
 import card1 from '../imge/card9.jpg';
 import card2 from '../imge/card2.jpg';
 import card3 from '../imge/card3.jpg';
