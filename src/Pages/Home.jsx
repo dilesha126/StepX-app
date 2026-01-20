@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Grid, Typography, Box } from '@mui/material';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import LiquidEther from '../components/LiquidEther';// liquidbackground effect import
+import BackToTop from '../components/BackToTop';
 
 const Home = () => {
 
@@ -104,6 +105,9 @@ const Home = () => {
                 </Grid>
               </Grid>
             </Container>
+
+            {/* Back to Top – only on home page */}
+           <BackToTop />
     </Box>
   );
 };

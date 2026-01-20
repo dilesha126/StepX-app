@@ -21,9 +21,7 @@ const ProductDetail = () => {
   const { slug } = useParams();
   const product = shoesData.find((p) => p.slug === slug);
 
-  
- 
-  const [mainImage, setMainImage] = useState(product?.imageUrl || '');
+  const [mainImage, setMainImage] = useState(product?.image || '');
   const [quantity, setQuantity] = useState(1);
   const [selectedSize, setSelectedSize] = useState(null);
 
@@ -38,11 +36,10 @@ const ProductDetail = () => {
 
   const discount = Math.round(((product.price * 1.4 - product.price) / (product.price * 1.4)) * 100);
 
-
   return (
     <Box sx={{ bgcolor: '#f8f8f8', minHeight: '100vh', p: { xs: 2, md: 4 } }}>
       <Grid container spacing={4}>
-        {/* Left thumbnails */}
+        {/* Left thumbnails (abhi empty hai, baad mein add kar sakte ho) */}
         <Grid item xs={12} md={2}>
           <List
             sx={{
@@ -52,7 +49,10 @@ const ProductDetail = () => {
               overflowX: { xs: 'auto', md: 'hidden' },
             }}
           >
-
+            {/* Agar multiple images hone to yahan map kar sakte ho */}
+            {/* <ListItem button onClick={() => setMainImage(someOtherImage)}>
+              <img src={someOtherImage} alt="thumbnail" style={{ width: '100%', borderRadius: 8 }} />
+            </ListItem> */}
           </List>
         </Grid>
 
@@ -69,7 +69,17 @@ const ProductDetail = () => {
             <img
               src={mainImage}
               alt={product.name}
-              style={{ width: '100%', height: 'auto', borderRadius: 8 }}
+              style={{ 
+                width: '100%', 
+                height: 'auto', 
+                maxHeight: '500px',
+                objectFit: 'contain', 
+                borderRadius: 8 
+              }}
+              onError={(e) => {
+                console.error('Image load failed:', mainImage);
+                e.target.src = 'https://via.placeholder.com/400x400?text=Image+Not+Found';
+              }}
             />
           </Box>
         </Grid>
@@ -103,7 +113,7 @@ const ProductDetail = () => {
           <Box sx={{ display: 'flex', gap: 1, mb: 3 }}>
             <Box sx={{ width: 32, height: 32, bgcolor: '#d2b48c', borderRadius: '50%', border: '1px solid #ccc' }} />
             <Box sx={{ width: 32, height: 32, bgcolor: '#8b4513', borderRadius: '50%', border: '1px solid #ccc' }} />
-             <Box sx={{ width: 32, height: 32, bgcolor: '#00095d', borderRadius: '50%', border: '1px solid #ccc' }} />
+            <Box sx={{ width: 32, height: 32, bgcolor: '#00095d', borderRadius: '50%', border: '1px solid #ccc' }} />
           </Box>
 
           <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
@@ -154,7 +164,7 @@ const ProductDetail = () => {
           </IconButton>
 
           <Typography variant="body1" paragraph sx={{ mt: 4 }}>
-            {product.description}
+            {product.description || "Premium comfort meets modern style. Lightweight cushioning and breathable upper for all-day wear."}
           </Typography>
 
           <Typography variant="subtitle1" fontWeight="bold" gutterBottom>

@@ -3,9 +3,11 @@ import { Grid, Card, CardMedia, CardContent, Typography, Rating, Button, Chip, B
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
+
+import ElectricBorder from '../components/ElectricBorder';//  ElectricBorder - Effect
+
 import { shoesData } from '../data/products';
 
-// import '../components/ScrollVelocity.css';  // agar file nahi hai to comment kar do
 
 const Collection = () => {
   const rows = [];
@@ -24,6 +26,14 @@ const Collection = () => {
             transition={{ duration: 0.7, ease: 'easeOut' }}
             whileHover={{ scale: 1.04 }}
           >
+             <ElectricBorder
+                          cardProps={{
+                            color: "#dd80ff",
+                            speed: 1,
+                            chaos: 0.12,
+                            borderRadius: 16
+                          }}
+                        >
             <Card
               sx={{
                 width: 380,
@@ -39,7 +49,7 @@ const Collection = () => {
               <Box sx={{ position: 'relative', flex: '0 0 380px' }}>
                 <CardMedia
                   component="img"
-                  image={shoe.image}   // ← yahan image use kar rahe hain (import wala)
+                  image={shoe.image}   // image use  (import )
                   alt={shoe.name}
                   sx={{
                     height: 350,
@@ -99,6 +109,7 @@ const Collection = () => {
                 </div>
               </CardContent>
             </Card>
+            </ElectricBorder>
           </motion.div>
         </Grid>
       ))}

@@ -52,7 +52,7 @@ const Footer = () => {
               {['New Arrivals', 'Men', 'Women', 'Kids', 'Track Order'].map((item) => (
                 <Link
                   key={item}
-                  href="#"
+                  href='/collection' // footer in store
                   color="inherit"
                   underline="hover"
                   display="block"
@@ -113,7 +113,7 @@ const Footer = () => {
               Inquiry/Complaint: <strong>96677 06012</strong>
             </Typography>
             <Typography variant="body2" mb={2.5} fontSize={{ xs: '0.85rem', sm: '0.9rem' }}>
-              10:00 AM – 7:00 PM
+              10:00 AM -7:00 PM
             </Typography>
 
             <Typography variant="body2" mb={0.8} fontSize={{ xs: '0.85rem', sm: '0.9rem' }}>

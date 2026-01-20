@@ -44,7 +44,7 @@ function App() {
             {/* <Route path="/contact" element={<Contact />} /> */}
            <Route path="/product/:slug" element={<ProductDetail />} />
 
-            {/* Agar koi galat URL daale to wapas Home pe */}
+            {/* return in Home page*/}
             <Route path="*" element={
               <>
                   <Home />
