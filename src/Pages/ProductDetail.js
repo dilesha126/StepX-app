@@ -9,7 +9,6 @@ import {
   Chip,
   IconButton,
   List,
-  ListItem,
 } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
@@ -21,7 +20,7 @@ const ProductDetail = () => {
   const { slug } = useParams();
   const product = shoesData.find((p) => p.slug === slug);
 
-  const [mainImage, setMainImage] = useState(product?.image || '');
+  const [mainImage] = useState(product?.image || '');
   const [quantity, setQuantity] = useState(1);
   const [selectedSize, setSelectedSize] = useState(null);
 

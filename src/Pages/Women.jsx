@@ -1,7 +1,6 @@
 import React from 'react';
 import { Grid, Card, CardMedia, CardContent, Typography, Rating, Button, Chip, Box } from '@mui/material';
-import { motion, useScroll, useSpring, useTransform, useMotionValue, useVelocity, useAnimationFrame } from 'framer-motion';
-import { useRef, useLayoutEffect, useState } from 'react';
+import { motion} from 'framer-motion';
 
 import ElectricBorder from '../components/ElectricBorder';//  ElectricBorder - Effect
 
