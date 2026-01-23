@@ -1,12 +1,12 @@
 import React from 'react';
 import { Container, Grid, Typography, Box } from '@mui/material';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import LiquidEther from '../components/LiquidEther';// liquidbackground effect import
 import BackToTop from '../components/BackToTop';
 
 const Home = () => {
 
-  const { scrollY } = useScroll();
+
 
 
   return (
@@ -91,12 +91,12 @@ const Home = () => {
                       }}
                     >
                   
-                  <button class="button">
+                  <button class="button" >
                   Shop Now
                   </button>
             
               
-              <button class="button">
+              <button class="button" >
                 View Collection
               </button>
 
